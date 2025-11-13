@@ -1,0 +1,22 @@
+create database if not exists sim default character set utf8;
+use  sim;
+create table student(
+  id int NOT NULL auto_increment primary key,
+  num varchar(10) ,
+  name varchar(20),
+  birthday date,
+  department varchar(20)
+) character set utf8;
+
+create table course(
+  id int NOT NULL auto_increment primary key,
+  num varchar(10) ,
+  name varchar(20),
+  credit int(11)
+) character set utf8;
+
+create table studentcourse(
+  id int NOT NULL auto_increment primary key,
+  snum varchar(10) ,
+  cnum varchar(10)
+) character set utf8;
